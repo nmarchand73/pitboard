@@ -1,0 +1,408 @@
+{
+  "id": "ktm-85-sx-2022",
+  "label": "KTM 85 SX 2022",
+  "manualFile": "/manuals/ktm-85-sx-2022.pdf",
+  "pageOffset": 2,
+  "intervals": [
+    { "id": "h10", "label": "après 10 heures d'utilisation / toutes les 10 heures d'utilisation", "kind": "hours" },
+    { "id": "h20", "label": "après 20 heures d'utilisation / toutes les 20 heures d'utilisation", "kind": "hours" },
+    { "id": "h40", "label": "toutes les 40 heures d'utilisation", "kind": "hours" },
+    { "id": "race", "label": "Après chaque course", "kind": "event" },
+    { "id": "m12", "label": "tous les 12 mois", "kind": "calendar" },
+    { "id": "m48", "label": "tous les 48 mois", "kind": "calendar" }
+  ],
+  "tasks": [
+    {
+      "id": "ob-01",
+      "category": "obligatoire",
+      "title": "Contrôler les plaquettes de frein avant.",
+      "page": 77,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-02",
+      "category": "obligatoire",
+      "title": "Contrôler les plaquettes de frein arrière.",
+      "page": 83,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-03",
+      "category": "obligatoire",
+      "title": "Vérifier les disques de frein.",
+      "page": 74,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-04",
+      "category": "obligatoire",
+      "title": "Vérifier l'état et l'étanchéité des durites de frein.",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-05",
+      "category": "obligatoire",
+      "title": "Remplacer la coupelle de joint du cylindre de frein à pied.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "periodic", "h40": "periodic", "race": "none", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-06",
+      "category": "obligatoire",
+      "title": "Contrôler le niveau de liquide de frein à l'arrière.",
+      "page": 81,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-07",
+      "category": "obligatoire",
+      "title": "Vérifier la course libre de la pédale de frein arrière.",
+      "page": 80,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-08",
+      "category": "obligatoire",
+      "title": "Contrôler le cadre.",
+      "page": 69,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-09",
+      "category": "obligatoire",
+      "title": "Vérifier le bras oscillant.",
+      "page": 69,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-10",
+      "category": "obligatoire",
+      "title": "Vérifier le jeu éventuel du roulement du bras oscillant.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "periodic", "h40": "periodic", "race": "none", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-11",
+      "category": "obligatoire",
+      "title": "Vérifier le jeu éventuel des paliers de pivot de l'amortisseur.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "periodic", "h40": "periodic", "race": "none", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-12",
+      "category": "obligatoire",
+      "title": "Vérifier l'état des pneus.",
+      "page": 89,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-13",
+      "category": "obligatoire",
+      "title": "Vérifier la pression des pneus.",
+      "page": 90,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-14",
+      "category": "obligatoire",
+      "title": "Vérifier le jeu éventuel du roulement de roue.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-15",
+      "category": "obligatoire",
+      "title": "Vérifier les moyeux de roue.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-16",
+      "category": "obligatoire",
+      "title": "Vérifier que les jantes ne sont pas voilées.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-17",
+      "category": "obligatoire",
+      "title": "Contrôler la tension des rayons.",
+      "page": 91,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-18",
+      "category": "obligatoire",
+      "title": "Vérifier la chaîne, la couronne, le pignon et le guide-chaîne.",
+      "page": 67,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-19",
+      "category": "obligatoire",
+      "title": "Contrôler la tension de la chaîne.",
+      "page": 65,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-20",
+      "category": "obligatoire",
+      "title": "Graisser et vérifier la liberté de mouvement de toutes les pièces mobiles (par ex. levier manuel, chaîne...).",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-21",
+      "category": "obligatoire",
+      "title": "Contrôler le niveau de liquide de l'embrayage hydraulique.",
+      "page": 71,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-22",
+      "category": "obligatoire",
+      "title": "Vérifier le niveau de liquide de frein à l'avant.",
+      "page": 75,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-23",
+      "category": "obligatoire",
+      "title": "Vérifier la course libre du levier de frein à main.",
+      "page": 74,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-24",
+      "category": "obligatoire",
+      "title": "Vérifier le jeu du palier de la tête de direction.",
+      "page": 53,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-25",
+      "category": "obligatoire",
+      "title": "Remplacer la bougie d'allumage et la fiche de bougie d'allumage.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "periodic", "h20": "periodic", "h40": "periodic", "race": "none", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-26",
+      "category": "obligatoire",
+      "title": "Remplacer l'huile de boîte.",
+      "page": 108,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-27",
+      "category": "obligatoire",
+      "title": "Inspecter tous les flexibles (par ex. flexibles de carburant, de liquide de refroidissement, de purge, de vidange...) et les cache-poussière à la recherche de fissures ou de défauts d'étanchéité, et vérifier que leur montage est correct.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-28",
+      "category": "obligatoire",
+      "title": "Vérifier l'antigel et le niveau de liquide de refroidissement.",
+      "page": 94,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-29",
+      "category": "obligatoire",
+      "title": "Vérifier que les câbles ne sont pas endommagés et qu'ils ne sont pas pliés.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-30",
+      "category": "obligatoire",
+      "title": "Vérifier l'état des câbles d'accélérateur, l'absence de pliures et le réglage.",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": { "h10": "none", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-31",
+      "category": "obligatoire",
+      "title": "Nettoyer le filtre à air et le boîtier du filtre à air.",
+      "page": 59,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-32",
+      "category": "obligatoire",
+      "title": "Remplacer la laine de roche du silencieux arrière.",
+      "page": 60,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "none", "h40": "periodic", "race": "none", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-33",
+      "category": "obligatoire",
+      "title": "Effectuer l'entretien de la fourche.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "none", "h40": "periodic", "race": "none", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-34",
+      "category": "obligatoire",
+      "title": "Effectuer l'entretien de l'amortisseur.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "none", "h40": "periodic", "race": "none", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-35",
+      "category": "obligatoire",
+      "title": "Vérifier le serrage des vis et écrous faciles d'accès et importants pour la sécurité.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-36",
+      "category": "obligatoire",
+      "title": "Contrôler le régime de ralenti.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-37",
+      "category": "obligatoire",
+      "title": "Contrôle final : vérifier la sécurité de fonctionnement du véhicule et effectuer une marche d'essai.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "ob-38",
+      "category": "obligatoire",
+      "title": "Faire le rapport des interventions sur la plateforme KTM Dealer.net.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "once", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "re-01",
+      "category": "recommandé",
+      "title": "Remplacer le liquide de frein à l'avant.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "none", "h40": "none", "race": "none", "m12": "periodic", "m48": "periodic" }
+    },
+    {
+      "id": "re-02",
+      "category": "recommandé",
+      "title": "Remplacer le liquide de frein à l'arrière.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "none", "h40": "periodic", "race": "periodic", "m12": "periodic", "m48": "periodic" }
+    },
+    {
+      "id": "re-03",
+      "category": "recommandé",
+      "title": "Vidanger le liquide d'embrayage hydraulique.",
+      "page": 72,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "none", "h40": "none", "race": "none", "m12": "periodic", "m48": "periodic" }
+    },
+    {
+      "id": "re-04",
+      "category": "recommandé",
+      "title": "Graisser le palier de la tête de direction.",
+      "page": 55,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "none", "h40": "none", "race": "none", "m12": "periodic", "m48": "periodic" }
+    },
+    {
+      "id": "re-05",
+      "category": "recommandé",
+      "title": "Effectuer l'entretien de la fourche.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "none", "h40": "once", "race": "none", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "re-06",
+      "category": "recommandé",
+      "title": "Effectuer l'entretien de l'amortisseur.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "once", "h40": "none", "race": "none", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "re-07",
+      "category": "recommandé",
+      "title": "Contrôler/régler les composants du carburateur.",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "none", "h40": "none", "race": "periodic", "m12": "periodic", "m48": "periodic" }
+    },
+    {
+      "id": "re-08",
+      "category": "recommandé",
+      "title": "Remplacer le liquide de refroidissement.",
+      "page": 98,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "none", "h40": "none", "race": "none", "m12": "none", "m48": "periodic" }
+    },
+    {
+      "id": "re-09",
+      "category": "recommandé",
+      "title": "Effectuer un petit entretien du moteur. (Vérifier la pipe d'admission. Vérifier l'embrayage. En cas de conditions de conduite difficiles : remplacer les pistons, contrôler les cylindres et la cote Z.)",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "periodic", "h20": "periodic", "h40": "periodic", "race": "periodic", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "re-10",
+      "category": "recommandé",
+      "title": "Effectuer un entretien moyen. (Remplacer le piston. Contrôler les cylindres et la cote Z. Vérifier le fonctionnement et la souplesse de la valve d'échappement.)",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "periodic", "h40": "periodic", "race": "none", "m12": "none", "m48": "none" }
+    },
+    {
+      "id": "re-11",
+      "category": "recommandé",
+      "title": "Effectuer un entretien avancé, y compris un démontage et un montage du moteur. (Remplacer la bielle, les paliers de bielle et les manetons. Contrôler la boîte de vitesses et l'engagement des rapports. Remplacer tous les paliers du moteur.)",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": { "h10": "none", "h20": "none", "h40": "periodic", "race": "none", "m12": "none", "m48": "none" }
+    }
+  ]
+}

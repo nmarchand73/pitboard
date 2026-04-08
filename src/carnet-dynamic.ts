@@ -170,21 +170,23 @@ export function buildCarnetSectionHtml(
     <section class="carnet-panel${panelMod}" aria-labelledby="${sectionId}">
       ${bar}
       <div class="carnet-panel__sheet carnet-panel__sheet--table" tabindex="0" role="region" aria-label="${ariaLabel}, défilement horizontal possible">
-        <table class="carnet-table ${isOb ? 'carnet-table--ob' : 'carnet-table--rec'}" aria-label="${ariaLabel}">
-          ${colgroup}
-          <thead>
-            <tr>
-              <th scope="col" class="carnet-table__corner">
-                <span class="carnet-table__corner-txt">Travaux à effectuer</span>
-              </th>
-              ${headCells}
-              ${remarksHead}
-            </tr>
-          </thead>
-          <tbody>
-            ${bodyRows}
-          </tbody>
-        </table>
+        <div class="carnet-table-scroll">
+          <table class="carnet-table ${isOb ? 'carnet-table--ob' : 'carnet-table--rec'}" aria-label="${ariaLabel}">
+            ${colgroup}
+            <thead>
+              <tr>
+                <th scope="col" class="carnet-table__corner">
+                  <span class="carnet-table__corner-txt">Travaux à effectuer</span>
+                </th>
+                ${headCells}
+                ${remarksHead}
+              </tr>
+            </thead>
+            <tbody>
+              ${bodyRows}
+            </tbody>
+          </table>
+        </div>
       </div>
       <p class="carnet-panel__legend">
         <strong>Légende :</strong>

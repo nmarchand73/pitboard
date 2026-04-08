@@ -1,7 +1,7 @@
 import './style.css'
 import { buildCarnetPanelsHtml } from './carnet-dynamic'
 import { openPdfModal } from './pdf-modal'
-import type { BikeDoc, IntervalDef } from './types'
+import type { BikeBrand, BikeDoc, IntervalDef } from './types'
 import bikeIndex from './data/bike-index.json'
 import ktm852022 from './data/bikes/ktm-85-sx-2022.json'
 import yz1252007 from './data/bikes/yz-125-2007.json'
@@ -42,6 +42,21 @@ function intervalFilterShortLabel(bike: BikeDoc): string {
   return iv ? shortIntervalLabel(iv) : intervalFilterId
 }
 
+const BRAND_MONOGRAM: Record<BikeBrand, string> = {
+  ktm: 'KTM',
+  yamaha: 'Yamaha',
+}
+
+function bikeBrandMonogram(brand: BikeBrand): string {
+  return BRAND_MONOGRAM[brand]
+}
+
+/** Libellé modèle sans répéter la marque sur la 2e ligne de la pastille. */
+function bikeModelLine(label: string, brand: BikeBrand): string {
+  if (brand === 'ktm') return label.replace(/^KTM\s+/i, '').trim()
+  return label.replace(/^Yamaha\s+/i, '').trim()
+}
+
 /** Ancien lien #guide : on reste sur le carnet. */
 function stripGuideHashFromUrl(): void {
   const raw = window.location.hash.replace(/^#/, '')
@@ -62,16 +77,39 @@ function render(): void {
         <p class="carnet-hero__brand">Pitboard</p>
         <h1 class="carnet-hero__title">Entretien par période</h1>
         <div class="carnet-hero__pick">
-          <label class="field__label" for="bike-select-front">Moto</label>
-          <select id="bike-select-front" class="select select--carnet" autocomplete="off">
+          <p id="bike-pills-label" class="field__label">Moto</p>
+          <div
+            class="carnet-bike-pills"
+            role="radiogroup"
+            aria-labelledby="bike-pills-label"
+          >
             ${bikeIndex.bikes
               .map((id) => {
                 const b = bikeRegistry[id]
                 const label = b?.label ?? id
-                return `<option value="${id}" ${id === selectedBikeId ? 'selected' : ''}>${escapeHtml(label)}</option>`
+                const brand: BikeBrand = b?.brand ?? 'ktm'
+                const checked = id === selectedBikeId
+                const mono = bikeBrandMonogram(brand)
+                const modelLine = bikeModelLine(label, brand)
+                return `<label class="carnet-bike-pill" data-brand="${brand}">
+                  <input
+                    type="radio"
+                    name="bike-front"
+                    value="${escapeHtml(id)}"
+                    class="sr-only"
+                    ${checked ? 'checked' : ''}
+                  />
+                  <span class="carnet-bike-pill__inner">
+                    <span class="carnet-bike-pill__swatch" aria-hidden="true"></span>
+                    <span class="carnet-bike-pill__copy">
+                      <span class="carnet-bike-pill__mono">${escapeHtml(mono)}</span>
+                      <span class="carnet-bike-pill__text">${escapeHtml(modelLine)}</span>
+                    </span>
+                  </span>
+                </label>`
               })
               .join('')}
-          </select>
+          </div>
         </div>
       </header>
 
@@ -96,10 +134,13 @@ function render(): void {
     </div>
   `
 
-  document.getElementById('bike-select-front')?.addEventListener('change', (e) => {
-    selectedBikeId = (e.target as HTMLSelectElement).value
-    intervalFilterId = 'tous'
-    render()
+  root.querySelectorAll<HTMLInputElement>('input[name="bike-front"]').forEach((radio) => {
+    radio.addEventListener('change', () => {
+      if (!radio.checked) return
+      selectedBikeId = radio.value
+      intervalFilterId = 'tous'
+      render()
+    })
   })
 
   document.getElementById('carnet-clear-interval')?.addEventListener('click', () => {

@@ -1,3 +1,6 @@
+/** Repère visuel des pastilles « Moto » (couleurs / ton de la marque). */
+export type BikeBrand = 'ktm' | 'yamaha'
+
 export type IntervalKind = 'hours' | 'event' | 'calendar'
 
 export type CellValue = 'none' | 'once' | 'periodic'
@@ -30,6 +33,7 @@ export interface CarnetColumnSets {
 export interface BikeDoc {
   id: string
   label: string
+  brand: BikeBrand
   manualFile: string
   /** Décalage page affichée PDF vs numéro de page dans les données (ex. KTM +2). */
   pageOffset?: number

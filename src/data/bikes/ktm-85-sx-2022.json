@@ -3,6 +3,7 @@
   "label": "KTM 85 SX 2022",
   "manualFile": "/manuals/ktm-85-sx-2022.pdf",
   "pageOffset": 2,
+  "carnetRecommendedBadge": "9.3",
   "intervals": [
     { "id": "h10", "label": "après 10 heures d'utilisation / toutes les 10 heures d'utilisation", "kind": "hours" },
     { "id": "h20", "label": "après 20 heures d'utilisation / toutes les 20 heures d'utilisation", "kind": "hours" },

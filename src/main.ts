@@ -4,9 +4,11 @@ import { openPdfModal } from './pdf-modal'
 import type { BikeDoc, IntervalDef } from './types'
 import bikeIndex from './data/bike-index.json'
 import ktm852022 from './data/bikes/ktm-85-sx-2022.json'
+import yz1252007 from './data/bikes/yz-125-2007.json'
 
 const bikeRegistry: Record<string, BikeDoc> = {
   'ktm-85-sx-2022': ktm852022 as BikeDoc,
+  'yz-125-2007': yz1252007 as BikeDoc,
 }
 
 const root = document.querySelector<HTMLDivElement>('#app')!
@@ -27,6 +29,10 @@ function shortIntervalLabel(iv: IntervalDef): string {
   if (iv.id === 'race') return 'Après course'
   if (iv.id === 'm12') return '12 mois'
   if (iv.id === 'm48') return '48 mois'
+  if (iv.id === 'rodage') return 'Après rodage'
+  if (iv.id === 'race3') return '3e course'
+  if (iv.id === 'race5') return '5e course'
+  if (iv.id === 'need') return 'Si nécessaire'
   return iv.label
 }
 

@@ -2,9 +2,18 @@
 
 Web app for reading the **manufacturer maintenance schedule** as an interactive grid (same structure as the paper service booklet), filtering by interval column, and opening the **factory manual PDF** at the listed page. Built for workshop and mobile use.
 
+Some bikes also show a **Remarks** column when the data includes `remarks` (lubricants, slacks, chapter cross-references, and other OEM notes from the manual).
+
 **Repository:** [github.com/nmarchand73/pitboard](https://github.com/nmarchand73/pitboard)
 
 **Live (GitHub Pages):** [nmarchand73.github.io/pitboard](https://nmarchand73.github.io/pitboard/)
+
+## Supported bikes (data shipped in repo)
+
+| ID | Label | Manual (in `public/manuals/`) | Notes |
+|----|--------|---------------------------------|--------|
+| `ktm-85-sx-2022` | KTM 85 SX 2022 | `ktm-85-sx-2022.pdf` | Hour / event / calendar columns; `pageOffset: 2` (book page → PDF page). Recommended block badge `9.3` via `carnetRecommendedBadge`. |
+| `yz-125-2007` | Yamaha YZ 125 2007 | `yz-125-2007.pdf` | Race-based columns (break-in, every race, 3rd / 5th race, if needed). **`remarks`** on many rows. Each task `page` is a **PDF file page** (`pageOffset: 0`) opening on the **French procedure** (ch. 3 inspections, ch. 4–5 démontages), not only the tableau « programme d’entretien » (3-1–3-3). |
 
 ## Prerequisites
 
@@ -21,11 +30,11 @@ npm install
 
 ## Scripts
 
-| Command           | Description                                      |
-|-------------------|--------------------------------------------------|
-| `npm run dev`     | Dev server (default: `http://localhost:5173`)   |
-| `npm run build`   | Type-check + production build → `dist/`          |
-| `npm run preview` | Serve `dist/` locally (port shown in terminal)   |
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Dev server (default: `http://localhost:5173`) |
+| `npm run build` | Type-check + production build → `dist/` |
+| `npm run preview` | Serve `dist/` locally (port shown in terminal) |
 
 For a **production build** that matches GitHub Pages (base path `/<repo>/`), run:
 
@@ -47,18 +56,29 @@ Deployments run via [`.github/workflows/pages.yml`](.github/workflows/pages.yml)
 
 ## Static assets (manuals)
 
-Place OEM PDF files under `public/` as referenced by each bike’s data, for example:
+Place OEM PDF files under `public/manuals/` as referenced by each bike’s JSON (`manualFile`), for example:
 
-`public/manuals/ktm-85-sx-2022.pdf`
-
-Paths are set in `src/data/bikes/*.json` (`manualFile` field).
+- `public/manuals/ktm-85-sx-2022.pdf`
+- `public/manuals/yz-125-2007.pdf`
 
 ## Data model
 
-- **Bike registry:** `src/data/bike-index.json`
-- **Bike definition:** `src/data/bikes/<id>.json` — intervals, tasks, and cell markers (○ / ●) per column
+- **Bike list (order in UI):** `src/data/bike-index.json` (`bikes`: array of ids).
+- **Bike definition:** `src/data/bikes/<id>.json`:
+  - `intervals[]` — column ids and labels.
+  - `tasks[]` — `title`, optional `page` (see `pageOffset` below), `cells` map (`none` / `once` / `periodic`), optional **`remarks`** (shown in a **Remarques** column when any visible task has non-empty text).
+  - **`pageOffset`** (optional): added to `task.page` when opening the PDF (e.g. KTM uses printed manual page in data; YZ uses **PDF page index** with `0`).
+  - **`carnetColumns`** (optional): `{ obligatoire, recommandé }` arrays of interval ids per table section. If omitted, the default is the KTM-style hour grid.
+  - **`carnetRecommendedBadge`** (optional): short label before “Travaux recommandés” (e.g. `"9.3"` for KTM). Omit for no badge.
 
-To add a model: copy an existing JSON, set a unique `id`, add the PDF under `public/manuals/`, and register the bike in `bike-index.json`.
+**Runtime registry:** import the JSON in `src/main.ts` and add it to `bikeRegistry` under the same `id` as in `bike-index.json`.
+
+### Adding a new model
+
+1. Add the PDF under `public/manuals/<slug>.pdf`.
+2. Copy `src/data/bikes/yz-125-2007.json` or `ktm-85-sx-2022.json` as a template; set `id`, `label`, `manualFile`, intervals, tasks, and optional `carnetColumns` / `remarks` / `pageOffset`.
+3. Append the `id` to `src/data/bike-index.json`.
+4. Register the document in `src/main.ts` (`bikeRegistry`).
 
 ## Stack
 

@@ -4,6 +4,13 @@ import { pdfStartPage } from './pdf-page'
 const COLS_OBLIGATOIRE = ['h10', 'h20', 'h40', 'race'] as const
 const COLS_RECOMMANDE = ['h10', 'h20', 'h40', 'race', 'm12', 'm48'] as const
 
+function getCarnetColumnIds(bike: BikeDoc, category: 'obligatoire' | 'recommandé'): readonly string[] {
+  if (bike.carnetColumns) {
+    return bike.carnetColumns[category]
+  }
+  return category === 'obligatoire' ? COLS_OBLIGATOIRE : COLS_RECOMMANDE
+}
+
 function esc(s: string): string {
   return s
     .replaceAll('&', '&amp;')
@@ -26,6 +33,10 @@ function shortIntervalAriaLabel(bike: BikeDoc, id: string): string {
   if (iv.id === 'race') return 'après chaque course'
   if (iv.id === 'm12') return '12 mois'
   if (iv.id === 'm48') return '48 mois'
+  if (iv.id === 'rodage') return 'après rodage'
+  if (iv.id === 'race3') return 'chaque 3e course'
+  if (iv.id === 'race5') return 'chaque 5e course'
+  if (iv.id === 'need') return 'si nécessaire'
   return iv.label
 }
 
@@ -43,6 +54,11 @@ function cellSymbol(v: CellValue): string {
   return '<span class="carnet-m carnet-m--empty" aria-hidden="true"></span>'
 }
 
+function taskRemarksText(task: MaintenanceTask): string {
+  const r = task.remarks?.trim()
+  return r ?? ''
+}
+
 function taskRowCell(bike: BikeDoc, task: MaintenanceTask): string {
   const wrench = task.requiresSpecialTools
     ? '<span class="carnet-wrench-inline" title="Outillage spécifique ou point atelier" aria-hidden="true">🔧</span>'
@@ -54,12 +70,21 @@ function taskRowCell(bike: BikeDoc, task: MaintenanceTask): string {
 
   const line = `<span class="carnet-taskcell__line"><span class="carnet-taskcell__txt">${esc(task.title)}</span>${wrench}${manualHint}</span>`
 
+  const rm = taskRemarksText(task)
+  const ariaBase = `Ouvrir le manuel — ${task.title} (page ${task.page})${rm ? ` — Remarque : ${rm}` : ''}`
+
   if (task.page != null) {
     const start = pdfStartPage(bike, task.page)
-    return `<button type="button" class="carnet-taskcell carnet-taskcell--manual" data-open-manual data-manual-path="${esc(bike.manualFile)}" data-start-page="${start}" data-context-title="${esc(task.title)}" aria-label="Ouvrir le manuel — ${esc(task.title)} (page ${task.page})">${line}</button>`
+    return `<button type="button" class="carnet-taskcell carnet-taskcell--manual" data-open-manual data-manual-path="${esc(bike.manualFile)}" data-start-page="${start}" data-context-title="${esc(task.title)}" aria-label="${esc(ariaBase)}">${line}</button>`
   }
 
   return `<div class="carnet-taskcell">${line}</div>`
+}
+
+function taskRemarksTableCell(task: MaintenanceTask): string {
+  const rm = taskRemarksText(task)
+  const inner = rm ? `<p class="carnet-remarks__txt">${esc(rm)}</p>` : '<span class="carnet-remarks__empty" aria-hidden="true">—</span>'
+  return `<td class="carnet-table__remarks">${inner}</td>`
 }
 
 /**
@@ -70,14 +95,13 @@ export function buildCarnetSectionHtml(
   category: 'obligatoire' | 'recommandé',
   intervalFilterId: string | 'tous' = 'tous',
 ): string {
-  const colIds =
-    category === 'obligatoire'
-      ? (COLS_OBLIGATOIRE as readonly string[])
-      : (COLS_RECOMMANDE as readonly string[])
+  const colIds = getCarnetColumnIds(bike, category)
   const tasks = bike.tasks.filter(
     (t) => t.category === category && taskRowMatchesIntervalFilter(t, intervalFilterId),
   )
   if (tasks.length === 0) return ''
+
+  const includeRemarks = tasks.some((t) => taskRemarksText(t) !== '')
 
   const headCells = colIds
     .map((id, i) => {
@@ -101,6 +125,12 @@ export function buildCarnetSectionHtml(
     })
     .join('')
 
+  const remarksHead = includeRemarks
+    ? `<th scope="col" class="carnet-table__remarks-h">
+        <span class="carnet-table__remarks-h-txt" title="Indications du manuel (lubrifiants, jeux, renvois…)">Remarques</span>
+      </th>`
+    : ''
+
   const bodyRows = tasks
     .map((task) => {
       const syms = colIds
@@ -109,23 +139,30 @@ export function buildCarnetSectionHtml(
           return `<td class="carnet-table__sym carnet-table__sym--b${colIdx % 2}">${cellSymbol(v)}</td>`
         })
         .join('')
+      const remarksTd = includeRemarks ? taskRemarksTableCell(task) : ''
       return `<tr class="carnet-table__row">
         <th scope="row" class="carnet-table__task">${taskRowCell(bike, task)}</th>
         ${syms}
+        ${remarksTd}
       </tr>`
     })
     .join('')
 
   const isOb = category === 'obligatoire'
   const sectionId = isOb ? 'carnet-ob-title' : 'carnet-rec-title'
+  const badge =
+    bike.carnetRecommendedBadge != null && bike.carnetRecommendedBadge !== ''
+      ? `<span class="carnet-panel__bar-num">${esc(bike.carnetRecommendedBadge)}</span>`
+      : ''
   const bar = isOb
     ? `<div class="carnet-panel__bar" id="${sectionId}"><span class="carnet-panel__bar-text">Travaux obligatoires</span></div>`
-    : `<div class="carnet-panel__bar carnet-panel__bar--accent" id="${sectionId}"><span class="carnet-panel__bar-num">9.3</span><span class="carnet-panel__bar-text">Travaux recommandés</span></div>`
+    : `<div class="carnet-panel__bar carnet-panel__bar--accent" id="${sectionId}">${badge}<span class="carnet-panel__bar-text">Travaux recommandés</span></div>`
 
   const ariaLabel = isOb ? 'Tableau des travaux obligatoires' : 'Tableau des travaux recommandés'
   const colgroup = `<colgroup>
     <col class="carnet-col-task" />
     ${colIds.map(() => '<col class="carnet-col-int" />').join('')}
+    ${includeRemarks ? '<col class="carnet-col-remarks" />' : ''}
   </colgroup>`
 
   const panelMod = isOb ? ' carnet-panel--ob' : ' carnet-panel--rec'
@@ -141,6 +178,7 @@ export function buildCarnetSectionHtml(
                 <span class="carnet-table__corner-txt">Travaux à effectuer</span>
               </th>
               ${headCells}
+              ${remarksHead}
             </tr>
           </thead>
           <tbody>
@@ -153,6 +191,11 @@ export function buildCarnetSectionHtml(
         <span class="carnet-sym">○</span> intervalle unique ·
         <span class="carnet-sym">●</span> intervalle périodique
         <span class="carnet-panel__legend-tools"> · <span class="carnet-wrench" aria-hidden="true">🔧</span> outillage / atelier</span>
+        ${
+          includeRemarks
+            ? '<span class="carnet-panel__legend-remarks"> · Colonne <strong>Remarques</strong> : lubrifiants, jeux, renvois et précisions du constructeur.</span>'
+            : ''
+        }
       </p>
     </section>
   `

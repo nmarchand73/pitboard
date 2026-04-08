@@ -517,6 +517,68 @@ body {
   font-size: inherit;
 }
 
+.carnet-col-remarks {
+  width: 14.5rem;
+}
+
+.carnet-table__remarks-h {
+  border: 1px solid #bbb;
+  border-bottom: 2px solid #2a2a2a;
+  background: #ececec;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: bottom;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  min-width: 12rem;
+  position: sticky;
+  right: 0;
+  z-index: 2;
+  box-shadow: -6px 0 10px -6px rgba(0, 0, 0, 0.12);
+}
+
+.carnet-table__remarks-h-txt {
+  display: block;
+  line-height: var(--carnet-lh);
+}
+
+.carnet-table__remarks {
+  border: 1px solid #bbb;
+  border-bottom-color: #8a8a8a;
+  border-left: 2px solid #999;
+  padding: 0.4rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.38;
+  color: #242424;
+  background: #faf9f7;
+  min-width: 11.5rem;
+  max-width: 20rem;
+  position: sticky;
+  right: 0;
+  z-index: 1;
+  box-shadow: -6px 0 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.carnet-table__row:nth-child(even) .carnet-table__remarks {
+  background: #f3f2ef;
+}
+
+.carnet-remarks__txt {
+  margin: 0;
+  hyphens: auto;
+}
+
+.carnet-remarks__empty {
+  display: inline-block;
+  color: #aaa;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 /* Pastilles type manuel : creux plus grand (~25–30 % hauteur cellule), plein plus petit (~15–20 %) */
 .carnet-m {
   display: inline-flex;
@@ -631,6 +693,10 @@ body {
 
 .carnet-panel__legend-tools {
   color: #444;
+}
+
+.carnet-panel__legend-remarks {
+  color: #353535;
 }
 
 .carnet-panel__legend {

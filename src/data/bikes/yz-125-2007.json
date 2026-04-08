@@ -1,0 +1,985 @@
+{
+  "id": "yz-125-2007",
+  "label": "Yamaha YZ 125 2007",
+  "manualFile": "/manuals/yz-125-2007.pdf",
+  "pageOffset": 0,
+  "carnetColumns": {
+    "obligatoire": [
+      "rodage",
+      "race",
+      "race3",
+      "race5",
+      "need"
+    ],
+    "recommandé": []
+  },
+  "intervals": [
+    {
+      "id": "rodage",
+      "label": "Après rodage",
+      "kind": "event"
+    },
+    {
+      "id": "race",
+      "label": "À chaque course",
+      "kind": "event"
+    },
+    {
+      "id": "race3",
+      "label": "À chaque troisième course",
+      "kind": "event"
+    },
+    {
+      "id": "race5",
+      "label": "À chaque cinquième course",
+      "kind": "event"
+    },
+    {
+      "id": "need",
+      "label": "Si nécessaire",
+      "kind": "event"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "yz-ob-01",
+      "category": "obligatoire",
+      "title": "Piston — Contrôler et nettoyer",
+      "page": 249,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Contrôler s'il n'est pas fendu. Vérifiez la présence de dépôts de carbone et éliminez-les."
+    },
+    {
+      "id": "yz-ob-02",
+      "category": "obligatoire",
+      "title": "Piston — Changer",
+      "page": 249,
+      "requiresSpecialTools": true,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "periodic",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-03",
+      "category": "obligatoire",
+      "title": "Segment — Contrôler",
+      "page": 249,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Contrôler l'écartement des extrémités."
+    },
+    {
+      "id": "yz-ob-04",
+      "category": "obligatoire",
+      "title": "Segment — Changer",
+      "page": 249,
+      "requiresSpecialTools": true,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "periodic",
+        "race5": "none",
+        "need": "once"
+      },
+      "remarks": "Vérifiez la présence de dépôts de carbone et éliminez-les."
+    },
+    {
+      "id": "yz-ob-05",
+      "category": "obligatoire",
+      "title": "Axe de piston, roulement de pied de bielle — Contrôler",
+      "page": 337,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-06",
+      "category": "obligatoire",
+      "title": "Axe de piston, roulement de pied de bielle — Changer",
+      "page": 337,
+      "requiresSpecialTools": true,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-07",
+      "category": "obligatoire",
+      "title": "Culasse — Contrôler et nettoyer",
+      "page": 249,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Vérifiez la présence de dépôts de carbone et éliminez-les. Contrôler le joint."
+    },
+    {
+      "id": "yz-ob-08",
+      "category": "obligatoire",
+      "title": "Culasse — Resserrer",
+      "page": 249,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-09",
+      "category": "obligatoire",
+      "title": "Cylindre — Contrôler et nettoyer",
+      "page": 249,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Contrôler les marques de rayures. Contrôler l'usure."
+    },
+    {
+      "id": "yz-ob-10",
+      "category": "obligatoire",
+      "title": "Cylindre — Changer",
+      "page": 249,
+      "requiresSpecialTools": true,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      },
+      "remarks": "Vérifiez la présence de dépôts de carbone et éliminez-les."
+    },
+    {
+      "id": "yz-ob-11",
+      "category": "obligatoire",
+      "title": "YPVS — Contrôler et nettoyer",
+      "page": 305,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Vérifiez la présence de dépôts de carbone et éliminez-les."
+    },
+    {
+      "id": "yz-ob-12",
+      "category": "obligatoire",
+      "title": "Embrayage — Contrôler et régler",
+      "page": 151,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Contrôler la cloche, le disque de friction, le disque d'embrayage et le ressort."
+    },
+    {
+      "id": "yz-ob-13",
+      "category": "obligatoire",
+      "title": "Embrayage — Changer",
+      "page": 275,
+      "requiresSpecialTools": true,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-14",
+      "category": "obligatoire",
+      "title": "Boîte de vitesses — Changer l'huile",
+      "page": 159,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "none",
+        "race3": "none",
+        "race5": "periodic",
+        "need": "none"
+      },
+      "remarks": "Huile Yamalube 4 (10W-30) ou huile moteur SAE 10W-30 SE."
+    },
+    {
+      "id": "yz-ob-15",
+      "category": "obligatoire",
+      "title": "Boîte de vitesses — Contrôler",
+      "page": 157,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-16",
+      "category": "obligatoire",
+      "title": "Boîte de vitesses — Changer le roulement",
+      "page": 353,
+      "requiresSpecialTools": true,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-17",
+      "category": "obligatoire",
+      "title": "Fourchette, barillet, barre de guidage — Contrôler",
+      "page": 353,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      },
+      "remarks": "Contrôler l'usure."
+    },
+    {
+      "id": "yz-ob-18",
+      "category": "obligatoire",
+      "title": "Écrou du rotor — Resserrer",
+      "page": 319,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "none",
+        "race3": "none",
+        "race5": "periodic",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-19",
+      "category": "obligatoire",
+      "title": "Pot d'échappement — Contrôler",
+      "page": 221,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-20",
+      "category": "obligatoire",
+      "title": "Pot d'échappement — Nettoyer",
+      "page": 221,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "periodic",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-21",
+      "category": "obligatoire",
+      "title": "Pot d'échappement — Resserrer",
+      "page": 221,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-22",
+      "category": "obligatoire",
+      "title": "Vilebrequin — Contrôler et nettoyer",
+      "page": 337,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "periodic",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-23",
+      "category": "obligatoire",
+      "title": "Carburateur — Contrôler, régler et nettoyer",
+      "page": 229,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-24",
+      "category": "obligatoire",
+      "title": "Bougie — Contrôler et nettoyer",
+      "page": 210,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-25",
+      "category": "obligatoire",
+      "title": "Bougie — Changer",
+      "page": 210,
+      "requiresSpecialTools": false,
+      "remarks": "Contrôler l'écartement des électrodes et l'état des isolateurs.",
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-26",
+      "category": "obligatoire",
+      "title": "Chaîne de transmission — Graisser, jeu, alignement",
+      "page": 183,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Utiliser du lubrifiant pour chaîne. Jeu de la chaîne : 48~58 mm (1,9~2,3 in)."
+    },
+    {
+      "id": "yz-ob-27",
+      "category": "obligatoire",
+      "title": "Chaîne de transmission — Changer",
+      "page": 181,
+      "requiresSpecialTools": false,
+      "remarks": "Contrôler l'absence de fissures sur les maillons ; vérifier aussi le pignon de sortie de boîte.",
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-28",
+      "category": "obligatoire",
+      "title": "Circuit de refroidissement — Contrôler niveau et fuites du liquide",
+      "page": 143,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-29",
+      "category": "obligatoire",
+      "title": "Circuit de refroidissement — Contrôler le bouchon de radiateur",
+      "page": 147,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-30",
+      "category": "obligatoire",
+      "title": "Circuit de refroidissement — Changer le liquide de refroidissement",
+      "page": 145,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      },
+      "remarks": "Chaque deux ans."
+    },
+    {
+      "id": "yz-ob-31",
+      "category": "obligatoire",
+      "title": "Circuit de refroidissement — Contrôler les tuyaux",
+      "page": 151,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-32",
+      "category": "obligatoire",
+      "title": "Boulons et écrous extérieurs — Resserrer",
+      "page": 61,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Se réporter à la section « MISE EN ROUTE ET RODAGE » du CHAPITRE 1."
+    },
+    {
+      "id": "yz-ob-33",
+      "category": "obligatoire",
+      "title": "Filtre à air — Nettoyer et graisser",
+      "page": 155,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Utiliser l'huile de filtre à air en mousse ou huile équivalente."
+    },
+    {
+      "id": "yz-ob-34",
+      "category": "obligatoire",
+      "title": "Filtre à air — Changer",
+      "page": 155,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      },
+      "remarks": "Chaque année."
+    },
+    {
+      "id": "yz-ob-35",
+      "category": "obligatoire",
+      "title": "Cadre — Nettoyer et contrôler",
+      "page": 139,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-36",
+      "category": "obligatoire",
+      "title": "Réservoir à essence, robinet — Nettoyer et contrôler",
+      "page": 139,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "none",
+        "race3": "periodic",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-37",
+      "category": "obligatoire",
+      "title": "Freins — Régler levier et hauteur de pédale",
+      "page": 169,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-38",
+      "category": "obligatoire",
+      "title": "Freins — Graisser les pivots",
+      "page": 171,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-39",
+      "category": "obligatoire",
+      "title": "Freins — Contrôler la surface du disque",
+      "page": 173,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-40",
+      "category": "obligatoire",
+      "title": "Freins — Contrôler niveau de liquide et fuites",
+      "page": 179,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-41",
+      "category": "obligatoire",
+      "title": "Freins — Resserrer boulons disque, étrier, maître-cylindre",
+      "page": 173,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-42",
+      "category": "obligatoire",
+      "title": "Freins — Changer les plaquettes",
+      "page": 173,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-43",
+      "category": "obligatoire",
+      "title": "Freins — Changer le liquide de frein",
+      "page": 391,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      },
+      "remarks": "Chaque année."
+    },
+    {
+      "id": "yz-ob-44",
+      "category": "obligatoire",
+      "title": "Fourche avant — Contrôler et régler",
+      "page": 185,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-45",
+      "category": "obligatoire",
+      "title": "Fourche avant — Changer l'huile",
+      "page": 421,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "none",
+        "race3": "none",
+        "race5": "periodic",
+        "need": "none"
+      },
+      "remarks": "Huile de suspension « S1 »."
+    },
+    {
+      "id": "yz-ob-46",
+      "category": "obligatoire",
+      "title": "Fourche avant — Changer la bague d'étanchéité",
+      "page": 423,
+      "requiresSpecialTools": true,
+      "remarks": "Graisse à base de lithium (joints / antipoussière associés).",
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-47",
+      "category": "obligatoire",
+      "title": "Bague d'étanchéité et joint antipoussière de fourche — Nettoyer et lubrifier",
+      "page": 186,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Graisse à base de lithium."
+    },
+    {
+      "id": "yz-ob-48",
+      "category": "obligatoire",
+      "title": "Guide de protecteur — Changer",
+      "page": 181,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "periodic",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-49",
+      "category": "obligatoire",
+      "title": "Amortisseur arrière — Contrôler et régler",
+      "page": 191,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Après avoir roulé sous la pluie."
+    },
+    {
+      "id": "yz-ob-50",
+      "category": "obligatoire",
+      "title": "Amortisseur arrière — Lubrifier",
+      "page": 209,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "periodic",
+        "race5": "none",
+        "need": "once"
+      },
+      "remarks": "Graisse au bisulfure de molybdène. Chaque année."
+    },
+    {
+      "id": "yz-ob-51",
+      "category": "obligatoire",
+      "title": "Amortisseur arrière — Remplacer le siège du ressort",
+      "page": 489,
+      "requiresSpecialTools": true,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-52",
+      "category": "obligatoire",
+      "title": "Amortisseur arrière — Resserrer",
+      "page": 191,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-53",
+      "category": "obligatoire",
+      "title": "Guide-chaîne et rouleau — Contrôler",
+      "page": 181,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Graisse au bisulfure de molybdène."
+    },
+    {
+      "id": "yz-ob-54",
+      "category": "obligatoire",
+      "title": "Bras oscillant — Contrôler, lubrifier et resserrer",
+      "page": 473,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Graisse au bisulfure de molybdène."
+    },
+    {
+      "id": "yz-ob-55",
+      "category": "obligatoire",
+      "title": "Bras relais, bielle — Contrôler, lubrifier et resserrer",
+      "page": 473,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Graisse au bisulfure de molybdène."
+    },
+    {
+      "id": "yz-ob-56",
+      "category": "obligatoire",
+      "title": "Tête de fourche — Contrôler le jeu",
+      "page": 203,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-57",
+      "category": "obligatoire",
+      "title": "Tête de fourche — Nettoyer et lubrifier",
+      "page": 205,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "periodic",
+        "need": "none"
+      },
+      "remarks": "Graisse à base de lithium."
+    },
+    {
+      "id": "yz-ob-58",
+      "category": "obligatoire",
+      "title": "Tête de fourche — Changer le roulement",
+      "page": 463,
+      "requiresSpecialTools": true,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "periodic",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-59",
+      "category": "obligatoire",
+      "title": "Pneus et roues — Contrôler pression, voile, usure, rayons",
+      "page": 201,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-60",
+      "category": "obligatoire",
+      "title": "Pneus et roues — Resserrer boulons roue dentée",
+      "page": 201,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-61",
+      "category": "obligatoire",
+      "title": "Pneus et roues — Contrôler les roulements",
+      "page": 365,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "periodic",
+        "race5": "none",
+        "need": "none"
+      }
+    },
+    {
+      "id": "yz-ob-62",
+      "category": "obligatoire",
+      "title": "Pneus et roues — Changer les roulements",
+      "page": 365,
+      "requiresSpecialTools": true,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      }
+    },
+    {
+      "id": "yz-ob-63",
+      "category": "obligatoire",
+      "title": "Pneus et roues — Graisser",
+      "page": 365,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "none",
+        "race": "none",
+        "race3": "none",
+        "race5": "none",
+        "need": "once"
+      },
+      "remarks": "Graisse à base de lithium."
+    },
+    {
+      "id": "yz-ob-64",
+      "category": "obligatoire",
+      "title": "Accélérateur et câbles — Contrôler cheminement et branchement",
+      "page": 153,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Graisse au bisulfure de molybdène."
+    },
+    {
+      "id": "yz-ob-65",
+      "category": "obligatoire",
+      "title": "Accélérateur et câbles — Graisser",
+      "page": 153,
+      "requiresSpecialTools": false,
+      "cells": {
+        "rodage": "once",
+        "race": "periodic",
+        "race3": "none",
+        "race5": "none",
+        "need": "none"
+      },
+      "remarks": "Yamalube pour câble ou huile moteur SAE 10W-30."
+    }
+  ]
+}

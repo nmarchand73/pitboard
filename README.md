@@ -1,42 +1,68 @@
 # Pitboard
 
-Application web pour consulter le **carnet d’entretien constructeur** (grille par périodes, comme dans le manuel papier), filtrer par colonne et ouvrir le **PDF** du manuel à la page indiquée — pensée atelier / mobile.
+Web app for reading the **manufacturer maintenance schedule** as an interactive grid (same structure as the paper service booklet), filtering by interval column, and opening the **factory manual PDF** at the listed page. Built for workshop and mobile use.
 
-## Prérequis
+**Repository:** [github.com/nmarchand73/pitboard](https://github.com/nmarchand73/pitboard)
 
-- Node.js 20+ (recommandé)
-- npm
+## Prerequisites
 
-## Installation et commandes
+- **Node.js** 20+ recommended  
+- **npm**
 
-```powershell
-cd app
+## Setup
+
+```bash
+git clone https://github.com/nmarchand73/pitboard.git
+cd pitboard
 npm install
-npm run dev      # http://localhost:5173
-npm run build    # sortie dans dist/
-npm run preview  # sert dist/ (port affiché dans le terminal)
 ```
 
-## Contenu statique
+## Scripts
 
-Les fichiers du **manuel** doivent être servis depuis `public/`, par exemple :
+| Command           | Description                                      |
+|-------------------|--------------------------------------------------|
+| `npm run dev`     | Dev server (default: `http://localhost:5173`)   |
+| `npm run build`   | Type-check + production build → `dist/`          |
+| `npm run preview` | Serve `dist/` locally (port shown in terminal)   |
+
+## Static assets (manuals)
+
+Place OEM PDF files under `public/` as referenced by each bike’s data, for example:
 
 `public/manuals/ktm-85-sx-2022.pdf`
 
-Les chemins sont définis dans les JSON des motos (`src/data/bikes/*.json`, champ `manualFile`).
+Paths are set in `src/data/bikes/*.json` (`manualFile` field).
 
-## Données et motos
+## Data model
 
-- Registre : `src/data/bike-index.json`
-- Fiche modèle : `src/data/bikes/<id>.json` (intervalles, tâches, pastilles ○ / ● par colonne)
+- **Bike registry:** `src/data/bike-index.json`
+- **Bike definition:** `src/data/bikes/<id>.json` — intervals, tasks, and cell markers (○ / ●) per column
 
-Pour ajouter une moto : dupliquer une fiche existante, ajuster l’`id`, enregistrer le PDF sous `public/manuals/`, puis référencer la moto dans `bike-index.json`.
+To add a model: copy an existing JSON, set a unique `id`, add the PDF under `public/manuals/`, and register the bike in `bike-index.json`.
 
-## Détails techniques
+## Stack
 
 - **Vite 8** + **TypeScript**
-- **pdf.js** (`pdfjs-dist`) pour la visionneuse plein écran
+- **PDF.js** (`pdfjs-dist`) for the full-screen PDF viewer
 
-## Licence
+## License
 
-Projet privé — à adapter selon ton dépôt.
+### This project (Pitboard)
+
+Application source code in this repository is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
+
+### Third-party open-source components
+
+Bundled or used at build time:
+
+| Component | License | Role |
+|-----------|---------|------|
+| [pdfjs-dist](https://www.npmjs.com/package/pdfjs-dist) ([Mozilla PDF.js](https://github.com/mozilla/pdf.js)) | [Apache License 2.0](https://github.com/mozilla/pdf.js/blob/master/LICENSE) | PDF rendering |
+| [Vite](https://vitejs.dev/) | [MIT](https://github.com/vitejs/vite/blob/main/LICENSE) | Build tool & dev server |
+| [TypeScript](https://www.typescriptlang.org/) | [Apache License 2.0](https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt) | Language & compiler |
+
+Full third-party license texts are available in `node_modules/<package>/` after `npm install`.
+
+### Manufacturer PDFs and data
+
+Factory manuals, diagrams, and maintenance tables shipped with vehicles remain **property of their respective manufacturers** and are subject to their copyright and terms of use. Pitboard is a **viewer and layout tool** only; it does not grant any right to redistribute OEM documents beyond what you are already allowed to do under local law and OEM policy.

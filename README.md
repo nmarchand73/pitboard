@@ -8,7 +8,7 @@ Web app for reading the **manufacturer maintenance schedule** as an interactive 
 
 ## Prerequisites
 
-- **Node.js** 20+ recommended  
+- **Node.js** 20+ locally; **CI** uses Node **24** (GitHub Actions).
 - **npm**
 
 ## Setup

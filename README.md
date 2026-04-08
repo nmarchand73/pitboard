@@ -4,6 +4,8 @@ Web app for reading the **manufacturer maintenance schedule** as an interactive 
 
 **Repository:** [github.com/nmarchand73/pitboard](https://github.com/nmarchand73/pitboard)
 
+**Live (GitHub Pages):** [nmarchand73.github.io/pitboard](https://nmarchand73.github.io/pitboard/)
+
 ## Prerequisites
 
 - **Node.js** 20+ recommended  
@@ -24,6 +26,22 @@ npm install
 | `npm run dev`     | Dev server (default: `http://localhost:5173`)   |
 | `npm run build`   | Type-check + production build → `dist/`          |
 | `npm run preview` | Serve `dist/` locally (port shown in terminal)   |
+
+For a **production build** that matches GitHub Pages (base path `/<repo>/`), run:
+
+```bash
+VITE_BASE_URL=/pitboard/ npm run build
+npm run preview
+```
+
+Then open the URL Vite prints with the `/pitboard/` path (e.g. `http://localhost:4173/pitboard/`).
+
+## GitHub Pages
+
+Deployments run via [`.github/workflows/pages.yml`](.github/workflows/pages.yml) on every push to `main`.
+
+1. In the GitHub repo: **Settings → Pages → Build and deployment → Source**, choose **GitHub Actions** (not “Deploy from a branch”).
+2. After the first successful workflow run, the site is available at `https://<user>.github.io/<repo>/` (this project: [nmarchand73.github.io/pitboard](https://nmarchand73.github.io/pitboard/)).
 
 ## Static assets (manuals)
 

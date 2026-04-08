@@ -10,7 +10,9 @@ let detachPdfModal: (() => void) | null = null
 let previousFocus: HTMLElement | null = null
 
 function resolvePdfUrl(pdfPath: string): string {
-  return new URL(pdfPath, window.location.origin).href
+  const base = import.meta.env.BASE_URL
+  const path = pdfPath.replace(/^\/+/, '')
+  return new URL(path, `${window.location.origin}${base}`).href
 }
 
 export function closePdfModal(): void {

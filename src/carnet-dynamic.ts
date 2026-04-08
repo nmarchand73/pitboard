@@ -117,7 +117,7 @@ export function buildCarnetSectionHtml(
           title="${esc(title)}"
           aria-pressed="${ariaPressed}"
           aria-label="Filtrer le carnet sur ${esc(shortAria)}">
-          <div class="carnet-th__inner carnet-th__inner--s${i}">
+          <div class="carnet-th__inner">
             <span class="carnet-th__lab" title="${esc(full)}">${esc(full)}</span>
           </div>
         </button>

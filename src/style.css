@@ -1005,6 +1005,34 @@ body {
     width: min(36vw, 13rem);
   }
 
+  /*
+   * Colonne Remarques : sticky droite + colonne travaux sticky gauche (z-index 2)
+   * se superposent sur viewport étroit → texte rogné à gauche. En mobile, pas de
+   * sticky sur Remarques : défilement horizontal uniquement, contenu lisible.
+   */
+  .carnet-table__remarks-h,
+  .carnet-table__remarks {
+    position: static;
+    right: auto;
+    z-index: auto;
+    box-shadow: none;
+    max-width: none;
+  }
+
+  .carnet-table__remarks {
+    min-width: 11.5rem;
+    /* bord gauche comme les autres cellules (évite double trait avec sticky) */
+    border-left: 1px solid #bbb;
+  }
+
+  .carnet-col-remarks {
+    width: min(88vw, 16rem);
+  }
+
+  .carnet-table {
+    table-layout: auto;
+  }
+
   .pdf-modal__canvas-wrap {
     padding: var(--space-sm);
   }

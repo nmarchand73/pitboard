@@ -36,6 +36,8 @@ npm run preview
 
 Then open the URL Vite prints with the `/pitboard/` path (e.g. `http://localhost:4173/pitboard/`).
 
+The `devDependencies` `@emnapi/core` and `@emnapi/runtime` are pinned so **`npm ci`** stays consistent on Linux CI (they satisfy peer dependencies pulled in by the Vite / Rolldown toolchain).
+
 ## GitHub Pages
 
 Deployments run via [`.github/workflows/pages.yml`](.github/workflows/pages.yml) on every push to `main`.

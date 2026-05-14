@@ -1,0 +1,915 @@
+{
+  "id": "triumph-tiger-xcr-2019",
+  "label": "Triumph Tiger XCR 2019",
+  "brand": "triumph",
+  "manualFile": "/manuals/triumph-tiger-800-xcr-2019-fr.pdf",
+  "pageOffset": 0,
+  "carnetCornerLabel": "Description de l'opération",
+  "carnetFootnotes": [
+    "* Système de récupération des vapeurs de carburant monté sur les modèles de certains marchés seulement.",
+    "‡ Le cas échéant.",
+    "† Plusieurs liens manuel sur une même ligne ouvrent le même PDF à des pages différentes (tableau périodique, procédure, caractéristiques, etc.)."
+  ],
+  "carnetColumns": {
+    "obligatoire": [
+      "jour",
+      "rev800",
+      "year",
+      "km1030",
+      "km20",
+      "km40"
+    ],
+    "recommandé": []
+  },
+  "intervals": [
+    {
+      "id": "jour",
+      "label": "Tous les",
+      "headerSub": "jour",
+      "kind": "calendar"
+    },
+    {
+      "id": "rev800",
+      "label": "Première révision",
+      "headerSub": "800 ou un mois",
+      "kind": "hours"
+    },
+    {
+      "id": "year",
+      "label": "Entretien annuel",
+      "headerSub": "Ans",
+      "kind": "calendar"
+    },
+    {
+      "id": "km1030",
+      "label": "10 000 et 30 000",
+      "kind": "hours"
+    },
+    {
+      "id": "km20",
+      "label": "20 000",
+      "kind": "hours"
+    },
+    {
+      "id": "km40",
+      "label": "40 000",
+      "kind": "hours"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "tr-ob-01",
+      "category": "obligatoire",
+      "sectionTitle": "Lubrification",
+      "title": "Huile moteur — vidange / remplacement",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 148,
+          "shortLabel": "Niveau"
+        },
+        {
+          "page": 149,
+          "shortLabel": "Vidange"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-02",
+      "category": "obligatoire",
+      "title": "Filtre à huile moteur — remplacement",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": {
+        "jour": "dash",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 149,
+          "shortLabel": "Filtre"
+        },
+        {
+          "page": 151,
+          "shortLabel": "Spéc. / rebut"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-03",
+      "category": "obligatoire",
+      "title": "Moteur et refroidisseur d'huile — contrôle des fuites",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 124,
+          "shortLabel": "Contrôles jour"
+        },
+        {
+          "page": 148,
+          "shortLabel": "Huile / fuites"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-04",
+      "category": "obligatoire",
+      "sectionTitle": "Alimentation et gestion du moteur",
+      "title": "Circuit d'alimentation — recherche de fuites, d'usure des tuyaux par frottement, etc.",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 124,
+          "shortLabel": "Contrôles jour"
+        },
+        {
+          "page": 146,
+          "shortLabel": "Programme"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-05",
+      "category": "obligatoire",
+      "title": "Papillon d'accélérateur — contrôle / nettoyage",
+      "page": 155,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-06",
+      "category": "obligatoire",
+      "title": "Autoscan — effectuer un Autoscan complet avec l'outil de diagnostic Triumph",
+      "page": 146,
+      "requiresSpecialTools": true,
+      "cells": {
+        "jour": "dash",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-07",
+      "category": "obligatoire",
+      "title": "Modulateur d'ABS — vérifier les codes DTC enregistrés",
+      "page": null,
+      "requiresSpecialTools": true,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 62,
+          "shortLabel": "ABS / témoins"
+        },
+        {
+          "page": 146,
+          "shortLabel": "Programme"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-08",
+      "category": "obligatoire",
+      "title": "Système d'injection d'air secondaire — contrôle / nettoyage",
+      "page": 146,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "dash",
+        "km1030": "dash",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-09",
+      "category": "obligatoire",
+      "title": "Filtre à air — remplacement",
+      "page": 146,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "dash",
+        "km1030": "dash",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-10",
+      "category": "obligatoire",
+      "title": "Boîtiers de papillons — équilibrage",
+      "page": 146,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "dash",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-11",
+      "category": "obligatoire",
+      "title": "Flexibles de carburant — remplacement",
+      "page": 146,
+      "requiresSpecialTools": false,
+      "cells": {},
+      "intervalSpanText": "Tous les quatre ans, quel que soit le kilométrage"
+    },
+    {
+      "id": "tr-ob-12",
+      "category": "obligatoire",
+      "title": "Flexibles de récupération des vapeurs de carburant* — remplacement",
+      "page": 146,
+      "requiresSpecialTools": false,
+      "cells": {},
+      "intervalSpanText": "Tous les quatre ans, quel que soit le kilométrage"
+    },
+    {
+      "id": "tr-ob-13",
+      "category": "obligatoire",
+      "sectionTitle": "Allumage",
+      "title": "Bougies d'allumage — contrôle",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "dash",
+        "km1030": "periodic",
+        "km20": "dash",
+        "km40": "dash"
+      },
+      "manualRefs": [
+        {
+          "page": 146,
+          "shortLabel": "Programme"
+        },
+        {
+          "page": 209,
+          "shortLabel": "Caract."
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-14",
+      "category": "obligatoire",
+      "title": "Bougies d'allumage — remplacement",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "dash",
+        "km1030": "dash",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 209,
+          "shortLabel": "Caract."
+        },
+        {
+          "page": 212,
+          "shortLabel": "Couples"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-15",
+      "category": "obligatoire",
+      "sectionTitle": "Circuit de refroidissement",
+      "title": "Circuit de refroidissement — recherche de fuites",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 152,
+          "shortLabel": "Circuit"
+        },
+        {
+          "page": 154,
+          "shortLabel": "Radiateur"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-16",
+      "category": "obligatoire",
+      "title": "Niveau de liquide de refroidissement — contrôle / appoint",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 153,
+          "shortLabel": "Contrôle"
+        },
+        {
+          "page": 154,
+          "shortLabel": "Appoint"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-17",
+      "category": "obligatoire",
+      "title": "Liquide de refroidissement — remplacement",
+      "page": 154,
+      "requiresSpecialTools": false,
+      "cells": {},
+      "intervalSpanText": "Tous les trois ans, quel que soit le kilométrage"
+    },
+    {
+      "id": "tr-ob-18",
+      "category": "obligatoire",
+      "sectionTitle": "Moteur",
+      "title": "Câble d'embrayage — contrôle / réglage",
+      "page": 156,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-19",
+      "category": "obligatoire",
+      "title": "Jeu aux soupapes — contrôle / réglage",
+      "page": 146,
+      "requiresSpecialTools": true,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "dash",
+        "km1030": "dash",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-20",
+      "category": "obligatoire",
+      "title": "Distribution — réglage",
+      "page": 146,
+      "requiresSpecialTools": true,
+      "cells": {},
+      "intervalSpanText": "À la première révision des 20 000 km uniquement"
+    },
+    {
+      "id": "tr-ob-21",
+      "category": "obligatoire",
+      "sectionTitle": "Roues et pneumatiques",
+      "title": "Roues — contrôle de l'état",
+      "page": 178,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-22",
+      "category": "obligatoire",
+      "title": "Roulements de roues — contrôle de l'usure / de la douceur de fonctionnement",
+      "page": 168,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-23",
+      "category": "obligatoire",
+      "title": "Roues — recherche de rayons cassés ou endommagés (si équipé)",
+      "page": 178,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-24",
+      "category": "obligatoire",
+      "title": "Usure / dommages des pneus — contrôle",
+      "page": 178,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-25",
+      "category": "obligatoire",
+      "title": "Pression de gonflage des pneus — contrôle / correction",
+      "page": 178,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-26",
+      "category": "obligatoire",
+      "sectionTitle": "Équipement électrique",
+      "title": "Éclairage, instruments et circuits électriques — contrôle",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 124,
+          "shortLabel": "Contrôles jour"
+        },
+        {
+          "page": 147,
+          "shortLabel": "Programme"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-27",
+      "category": "obligatoire",
+      "sectionTitle": "Direction et suspension",
+      "title": "Direction — contrôle de la liberté de fonctionnement",
+      "page": 124,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-28",
+      "category": "obligatoire",
+      "title": "Fourche — contrôle des fuites / douceur de fonctionnement",
+      "page": 168,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-29",
+      "category": "obligatoire",
+      "title": "Huile de fourche — remplacement",
+      "page": 147,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "dash",
+        "km1030": "dash",
+        "km20": "dash",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-30",
+      "category": "obligatoire",
+      "title": "Roulements de colonne — contrôle / réglage",
+      "page": 167,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-31",
+      "category": "obligatoire",
+      "title": "Roulements de colonne — graissage",
+      "page": 167,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "dash",
+        "km1030": "dash",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-32",
+      "category": "obligatoire",
+      "title": "Timonerie de suspension arrière — contrôle / graissage",
+      "page": 147,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "dash",
+        "km1030": "dash",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-33",
+      "category": "obligatoire",
+      "sectionTitle": "Freins",
+      "title": "Plaquettes de freins — contrôle du niveau d'usure",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 161,
+          "shortLabel": "Usure"
+        },
+        {
+          "page": 162,
+          "shortLabel": "Rodage"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-34",
+      "category": "obligatoire",
+      "title": "Maîtres-cylindres de freins — recherche de fuites de liquide",
+      "page": 163,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-35",
+      "category": "obligatoire",
+      "title": "Étriers de freins — recherche de fuites de liquide et de pistons grippés",
+      "page": 162,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-36",
+      "category": "obligatoire",
+      "title": "Niveaux de liquide de frein — contrôle",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 164,
+          "shortLabel": "Frein avant"
+        },
+        {
+          "page": 165,
+          "shortLabel": "Frein arrière"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-37",
+      "category": "obligatoire",
+      "title": "Liquide de frein — remplacement",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {},
+      "intervalSpanText": "Tous les deux ans, quel que soit le kilométrage",
+      "manualRefs": [
+        {
+          "page": 163,
+          "shortLabel": "Liquide / flex."
+        },
+        {
+          "page": 164,
+          "shortLabel": "Niveau av."
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-38",
+      "category": "obligatoire",
+      "sectionTitle": "Chaîne de transmission",
+      "title": "Flèche de la chaîne de transmission — contrôle / réglage",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      },
+      "manualRefs": [
+        {
+          "page": 157,
+          "shortLabel": "Chaîne"
+        },
+        {
+          "page": 159,
+          "shortLabel": "Flèche"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-39",
+      "category": "obligatoire",
+      "title": "Chaîne de transmission — contrôle de l'usure",
+      "page": null,
+      "requiresSpecialTools": false,
+      "cells": {},
+      "intervalSpanText": "Tous les 800 km",
+      "manualRefs": [
+        {
+          "page": 157,
+          "shortLabel": "Chaîne"
+        },
+        {
+          "page": 161,
+          "shortLabel": "Usure"
+        }
+      ]
+    },
+    {
+      "id": "tr-ob-40",
+      "category": "obligatoire",
+      "title": "Chaîne de transmission — graissage",
+      "page": 158,
+      "requiresSpecialTools": false,
+      "cells": {},
+      "intervalSpanText": "Tous les 300 km"
+    },
+    {
+      "id": "tr-ob-41",
+      "category": "obligatoire",
+      "title": "Bande de frottement de la chaîne de transmission — contrôle",
+      "page": 161,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-42",
+      "category": "obligatoire",
+      "title": "Bande de frottement de la chaîne de transmission — remplacement",
+      "page": 161,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "dash",
+        "km1030": "dash",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-43",
+      "category": "obligatoire",
+      "sectionTitle": "Généralités",
+      "title": "Fixations — contrôle visuel du serrage",
+      "page": 124,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-44",
+      "category": "obligatoire",
+      "title": "Indicateurs d'angle d'inclinaison — contrôle visuel de l'usure",
+      "page": 177,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-45",
+      "category": "obligatoire",
+      "title": "Plateau coulissant du porte-paquet — contrôle du bon fonctionnement ‡",
+      "page": 147,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-46",
+      "category": "obligatoire",
+      "title": "Béquille latérale — contrôle du fonctionnement",
+      "page": 135,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-47",
+      "category": "obligatoire",
+      "title": "Béquille centrale — contrôle du fonctionnement",
+      "page": 108,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "daily",
+        "rev800": "periodic",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-48",
+      "category": "obligatoire",
+      "title": "Douilles à collerette de béquille centrale — vérifier / nettoyer / graisser",
+      "page": 147,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    },
+    {
+      "id": "tr-ob-49",
+      "category": "obligatoire",
+      "title": "Mécanisme de liaison des sacoches accessoires — contrôle du bon fonctionnement et réglage ‡",
+      "page": 118,
+      "requiresSpecialTools": false,
+      "cells": {
+        "jour": "dash",
+        "rev800": "dash",
+        "year": "periodic",
+        "km1030": "periodic",
+        "km20": "periodic",
+        "km40": "periodic"
+      }
+    }
+  ]
+}

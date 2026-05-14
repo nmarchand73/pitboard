@@ -217,6 +217,25 @@ body {
   line-height: 1.2;
 }
 
+.carnet-hero__manual {
+  margin: calc(-1 * var(--space-md)) 0 var(--space-lg);
+}
+
+.carnet-hero__manual-btn {
+  width: auto;
+  min-height: 2.5rem;
+  padding: 0 var(--space-md);
+  font-size: var(--carnet-fs-small);
+}
+
+.carnet-hero__manuals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+  margin: calc(-1 * var(--space-md)) 0 var(--space-lg);
+}
+
 .carnet-filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -387,6 +406,58 @@ body {
   border-color: #1565c0;
   background: color-mix(in srgb, #1976d2 22%, var(--bg-elevated));
   box-shadow: 0 0 0 1px color-mix(in srgb, #42a5f5 45%, transparent);
+}
+
+.carnet-bike-pill[data-brand='triumph'] .carnet-bike-pill__swatch {
+  background: linear-gradient(180deg, #e8e8e8 0%, #1a1a1a 45%, #c41e3a 100%);
+  box-shadow:
+    0 0 10px color-mix(in srgb, #c41e3a 40%, transparent),
+    0 1px 0 color-mix(in srgb, #fff 25%, transparent) inset;
+}
+
+.carnet-bike-pill[data-brand='triumph'] .carnet-bike-pill__mono {
+  color: #e0e0e0;
+}
+
+.carnet-bike-pill[data-brand='triumph']:hover {
+  border-color: color-mix(in srgb, #c41e3a 55%, var(--border-strong));
+  background: color-mix(in srgb, #c41e3a 10%, var(--surface-hover));
+}
+
+.carnet-bike-pill[data-brand='triumph']:has(:focus-visible) {
+  outline-color: #c41e3a;
+}
+
+.carnet-bike-pill[data-brand='triumph']:has(input:checked) {
+  border-color: #8b1530;
+  background: color-mix(in srgb, #c41e3a 18%, var(--bg-elevated));
+  box-shadow: 0 0 0 1px color-mix(in srgb, #c41e3a 45%, transparent);
+}
+
+.carnet-bike-pill[data-brand='rieju'] .carnet-bike-pill__swatch {
+  background: linear-gradient(180deg, #ffcc00 0%, #e65100 55%, #1b5e20 100%);
+  box-shadow:
+    0 0 10px color-mix(in srgb, #ff9800 45%, transparent),
+    0 1px 0 color-mix(in srgb, #fff 22%, transparent) inset;
+}
+
+.carnet-bike-pill[data-brand='rieju'] .carnet-bike-pill__mono {
+  color: #ffcc80;
+}
+
+.carnet-bike-pill[data-brand='rieju']:hover {
+  border-color: color-mix(in srgb, #ff9800 55%, var(--border-strong));
+  background: color-mix(in srgb, #ff9800 10%, var(--surface-hover));
+}
+
+.carnet-bike-pill[data-brand='rieju']:has(:focus-visible) {
+  outline-color: #ffb74d;
+}
+
+.carnet-bike-pill[data-brand='rieju']:has(input:checked) {
+  border-color: #e65100;
+  background: color-mix(in srgb, #ff9800 16%, var(--bg-elevated));
+  box-shadow: 0 0 0 1px color-mix(in srgb, #ffcc80 40%, transparent);
 }
 
 .carnet-bike-pill:active {
@@ -604,25 +675,147 @@ body {
   overflow-wrap: break-word;
 }
 
+.carnet-th__sub {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #333;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.carnet-table__section {
+  background: linear-gradient(180deg, #b8b8b8 0%, #9a9a9a 100%);
+}
+
+.carnet-table__section-th {
+  padding: 0.35rem 0.75rem;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  border: 1px solid #888;
+  border-top: 2px solid #666;
+}
+
+.carnet-table__span {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #bbb;
+  border-bottom-color: #8a8a8a;
+  vertical-align: middle;
+  color: #111;
+}
+
+.carnet-table__row--ze-even .carnet-table__span {
+  background: #ebebeb;
+}
+
+.carnet-table__row--ze-odd .carnet-table__span {
+  background: #f7f7f7;
+}
+
+.carnet-cell-text {
+  display: inline-block;
+  max-width: 100%;
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #111;
+}
+
+.carnet-cell-text--rieju {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  hyphens: none;
+}
+
+.carnet-sym-bullet {
+  display: inline-block;
+  font-size: 1.35em;
+  font-weight: 900;
+  line-height: 1;
+  color: #0a0a0a;
+}
+
+.carnet-m--dash {
+  font-weight: 700;
+  font-size: 1.05em;
+  color: #555;
+}
+
+.carnet-m--daily {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: lowercase;
+  color: #333;
+}
+
+.carnet-footnotes {
+  margin: 0.35rem 0 0;
+  padding: 0 0 0 1.1rem;
+  font-size: var(--carnet-fs-small);
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.carnet-footnotes__item {
+  margin: 0.15rem 0;
+}
+
+.carnet-panel__legend--triumph {
+  line-height: 1.45;
+}
+
+.carnet-table--brand-triumph .carnet-col-int {
+  width: 3.05rem;
+}
+
+.carnet-table--brand-triumph .carnet-th__lab {
+  max-width: 4.5rem;
+}
+
+.carnet-table--brand-rieju .carnet-col-int {
+  width: 4.1rem;
+}
+
+.carnet-table--brand-rieju .carnet-th__lab {
+  max-width: 4.75rem;
+}
+
+.carnet-panel__legend--rieju {
+  line-height: 1.45;
+}
+
 .carnet-table--rec .carnet-th__lab {
   max-width: 4.25rem;
 }
 
-.carnet-table__row:nth-child(even) .carnet-table__task,
-.carnet-table__row:nth-child(even) .carnet-table__sym--b0 {
+.carnet-table__row--ze-even .carnet-table__task,
+.carnet-table__row--ze-even .carnet-table__sym--b0 {
   background: #f3f3f3;
 }
 
-.carnet-table__row:nth-child(even) .carnet-table__sym--b1 {
+.carnet-table__row--ze-even .carnet-table__sym--b1 {
   background: #ebebeb;
 }
 
-.carnet-table__row:nth-child(odd) .carnet-table__task,
-.carnet-table__row:nth-child(odd) .carnet-table__sym--b0 {
+.carnet-table__row--ze-odd .carnet-table__task,
+.carnet-table__row--ze-odd .carnet-table__sym--b0 {
   background: #fff;
 }
 
-.carnet-table__row:nth-child(odd) .carnet-table__sym--b1 {
+.carnet-table__row--ze-odd .carnet-table__sym--b1 {
   background: #f7f7f7;
 }
 
@@ -701,8 +894,12 @@ body {
   box-shadow: -6px 0 10px -6px rgba(0, 0, 0, 0.1);
 }
 
-.carnet-table__row:nth-child(even) .carnet-table__remarks {
+.carnet-table__row--ze-even .carnet-table__remarks {
   background: #f3f2ef;
+}
+
+.carnet-table__row--ze-odd .carnet-table__remarks {
+  background: #faf9f7;
 }
 
 .carnet-remarks__txt {
@@ -760,9 +957,58 @@ body {
 }
 
 /* Toute la cellule ouvre le PDF (pas seulement « p. N ») */
-.carnet-table__task:has(.carnet-taskcell--manual) {
+.carnet-table__task:has(.carnet-taskcell--manual),
+.carnet-table__task:has(.carnet-taskcell--manual-mult) {
   padding: 0;
   vertical-align: middle;
+}
+
+.carnet-taskcell--manual-mult {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.5rem 0.65rem 0.5rem 0.7rem;
+  text-align: left;
+  line-height: inherit;
+}
+
+.carnet-manual-refs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.35rem;
+  row-gap: 0.2rem;
+  margin-top: 0.28rem;
+}
+
+.carnet-manual-refbtn {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0.12rem 0.2rem;
+  border: 1px solid color-mix(in srgb, #1a1a1a 22%, transparent);
+  border-radius: 6px;
+  background: color-mix(in srgb, #fff 88%, #ccc);
+  font: inherit;
+  font-size: 0.82em;
+  font-weight: 700;
+  color: #111;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.25;
+}
+
+.carnet-manual-refbtn:hover {
+  background: #fff;
+  border-color: #666;
+}
+
+.carnet-manual-refbtn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  position: relative;
+  z-index: 3;
 }
 
 .carnet-taskcell--manual {

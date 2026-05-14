@@ -2,6 +2,8 @@
 
 Web app for reading the **manufacturer maintenance schedule** as an interactive grid (same structure as the paper service booklet), filtering by interval column, and opening the **factory manual PDF** at the listed page. Built for workshop and mobile use.
 
+The repo ships **four** bike datasets (KTM, Yamaha, Triumph, Rieju); see **Supported bikes** below for PDFs, column layouts, and link behaviour (`page`, `manualRefs`, `extraManuals`).
+
 Some bikes also show a **Remarks** column when the data includes `remarks` (lubricants, slacks, chapter cross-references, and other OEM notes from the manual).
 
 **Repository:** [github.com/nmarchand73/pitboard](https://github.com/nmarchand73/pitboard)
@@ -14,6 +16,8 @@ Some bikes also show a **Remarks** column when the data includes `remarks` (lubr
 |----|--------|---------------------------------|--------|
 | `ktm-85-sx-2022` | KTM 85 SX 2022 | `ktm-85-sx-2022.pdf` | Hour / event / calendar columns; `pageOffset: 2` (book page → PDF page). Recommended block badge `9.3` via `carnetRecommendedBadge`. |
 | `yz-125-2007` | Yamaha YZ 125 2007 | `yz-125-2007.pdf` | Race-based columns (break-in, every race, 3rd / 5th race, if needed). **`remarks`** on many rows. Each task `page` is a **PDF file page** (`pageOffset: 0`) opening on the **French procedure** (ch. 3 inspections, ch. 4–5 démontages), not only the tableau « programme d’entretien » (3-1–3-3). |
+| `triumph-tiger-xcr-2019` | Triumph Tiger XCR 2019 | `triumph-tiger-800-xcr-2019-fr.pdf` | Calendar + hour grid (`jour`, first service, annual, mileage bands). `pageOffset: 0` (data page = PDF page). Some rows use **`manualRefs`** for two jumps in the same manual (e.g. periodic table vs procedure). OEM footnotes `*`, `‡`, `†` in `carnetFootnotes`. |
+| `rieju-mrt50-sm-trophy-2024` | Rieju MRT 50 SM Trophy 2024 | `rieju-mrt50-proprietaire-euro5-2022.pdf` (+ optional `extraManuals`) | Kilometre columns with letter codes in cells. **`manualRefs`** per task: owner manual + workshop PDFs (`extraManuals`). See `carnetFootnotes` in the JSON for the multi-PDF link legend. |
 
 ## Prerequisites
 
@@ -60,23 +64,28 @@ Place OEM PDF files under `public/manuals/` as referenced by each bike’s JSON 
 
 - `public/manuals/ktm-85-sx-2022.pdf`
 - `public/manuals/yz-125-2007.pdf`
+- `public/manuals/triumph-tiger-800-xcr-2019-fr.pdf`
+- `public/manuals/rieju-mrt50-proprietaire-euro5-2022.pdf` (and optional `rieju-mrt50-reparation-*.pdf` if you ship the Rieju workshop set)
 
 ## Data model
 
 - **Bike list (order in UI):** `src/data/bike-index.json` (`bikes`: array of ids).
 - **Bike definition:** `src/data/bikes/<id>.json`:
   - `intervals[]` — column ids and labels.
-  - `tasks[]` — `title`, optional `page` (see `pageOffset` below), `cells` map (`none` / `once` / `periodic`), optional **`remarks`** (shown in a **Remarques** column when any visible task has non-empty text).
+  - `tasks[]` — `title`, optional **`page`** or **`manualRefs`** (see below), `cells` map (`none` / `once` / `periodic` / `dash` / `daily` or `{ type: "text", value }`), optional **`remarks`** (shown in a **Remarques** column when any visible task has non-empty text).
   - **`pageOffset`** (optional): added to `task.page` when opening the PDF (e.g. KTM uses printed manual page in data; YZ uses **PDF page index** with `0`).
+  - **`manualRefs`** (optional, per task): list of `{ page, shortLabel?, manualPath? }`. When present, the UI shows one or more manual buttons instead of a single `page`; `manualPath` defaults to `bike.manualFile`. Use this for **multiple PDFs** (Rieju: owner + repair) or **several pages in the same PDF** (Triumph: periodic table vs detailed section).
+  - **`extraManuals`** (optional, on `BikeDoc`): `{ path, label }[]` for additional PDFs referenced from `manualRefs` via `manualPath`.
   - **`carnetColumns`** (optional): `{ obligatoire, recommandé }` arrays of interval ids per table section. If omitted, the default is the KTM-style hour grid.
   - **`carnetRecommendedBadge`** (optional): short label before “Travaux recommandés” (e.g. `"9.3"` for KTM). Omit for no badge.
+  - **`carnetFootnotes`** (optional): string array printed under the legend (OEM symbols, multi-link explanations).
 
 **Runtime registry:** import the JSON in `src/main.ts` and add it to `bikeRegistry` under the same `id` as in `bike-index.json`.
 
 ### Adding a new model
 
 1. Add the PDF under `public/manuals/<slug>.pdf`.
-2. Copy `src/data/bikes/yz-125-2007.json` or `ktm-85-sx-2022.json` as a template; set `id`, `label`, `manualFile`, intervals, tasks, and optional `carnetColumns` / `remarks` / `pageOffset`.
+2. Copy `src/data/bikes/yz-125-2007.json`, `ktm-85-sx-2022.json`, `triumph-tiger-xcr-2019.json`, or `rieju-mrt50-sm-trophy-2024.json` as a template; set `id`, `label`, `manualFile`, intervals, tasks, and optional `carnetColumns` / `remarks` / `pageOffset` / `manualRefs` / `extraManuals` / `carnetFootnotes`.
 3. Append the `id` to `src/data/bike-index.json`.
 4. Register the document in `src/main.ts` (`bikeRegistry`).
 

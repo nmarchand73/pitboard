@@ -1,0 +1,538 @@
+{
+  "id": "rieju-mrt50-sm-trophy-2024",
+  "label": "Rieju MRT 50 SM Trophy 2024",
+  "brand": "rieju",
+  "manualFile": "/manuals/rieju-mrt50-proprietaire-euro5-2022.pdf",
+  "manualPrimaryLabel": "Manuel propriétaire (Euro 5)",
+  "extraManuals": [
+    { "path": "/manuals/rieju-mrt50-reparation-moteur.pdf", "label": "Réparation — moteur" },
+    { "path": "/manuals/rieju-mrt50-reparation-chassis.pdf", "label": "Réparation — châssis" }
+  ],
+  "pageOffset": 0,
+  "carnetCornerLabel": "COMPOSANT",
+  "carnetFootnotes": [
+    "Le programme d'entretien peut changer en fonction de l'utilisation du véhicule, de la conduite, des conditions environnementales, etc.",
+    "Grille d'origine : Rieju 50 SM (manuel propriétaire) ; même base technique MRT 50 Euro 5. Reproduction du tableau constructeur : voir aussi l'image /images/rieju-mrt50-sm-travaux-entretien.png dans l'app.",
+    "Plusieurs liens « 📖 … » sur une même ligne : chaque bouton ouvre le PDF indiqué (Proprio. = manuel propriétaire, Moteur / Châssis = manuels atelier) au numéro de page du fichier."
+  ],
+  "carnetColumns": {
+    "obligatoire": ["km1000", "km4000", "km7000", "km10000", "kmPlus3000"],
+    "recommandé": []
+  },
+  "intervals": [
+    { "id": "km1000", "label": "1 000", "headerSub": "km", "kind": "hours" },
+    { "id": "km4000", "label": "4 000", "headerSub": "km", "kind": "hours" },
+    { "id": "km7000", "label": "7 000", "headerSub": "km", "kind": "hours" },
+    { "id": "km10000", "label": "10 000", "headerSub": "km", "kind": "hours" },
+    { "id": "kmPlus3000", "label": "+ 3 000", "headerSub": "km (récurrent)", "kind": "hours" }
+  ],
+  "tasks": [
+    {
+      "id": "rj-01",
+      "category": "obligatoire",
+      "title": "Filtre à air",
+      "page": null,
+      "manualRefs": [
+        { "page": 72, "shortLabel": "Proprio." },
+        { "page": 15, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "L/E" },
+        "km4000": { "type": "text", "value": "C" },
+        "km7000": { "type": "text", "value": "L/E" },
+        "km10000": { "type": "text", "value": "C" },
+        "kmPlus3000": { "type": "text", "value": "L/E - C" }
+      }
+    },
+    {
+      "id": "rj-02",
+      "category": "obligatoire",
+      "title": "Huile de transmission",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 24, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "C" },
+        "km4000": { "type": "text", "value": "C" },
+        "km7000": { "type": "text", "value": "C" },
+        "km10000": { "type": "text", "value": "C" },
+        "kmPlus3000": { "type": "text", "value": "C" }
+      }
+    },
+    {
+      "id": "rj-03",
+      "category": "obligatoire",
+      "title": "Vérifier le fonctionnement de la pompe à huile",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 17, "manualPath": "/manuals/rieju-mrt50-reparation-moteur.pdf", "shortLabel": "Moteur" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-04",
+      "category": "obligatoire",
+      "title": "Vérifier l'étanchéité de la transmission",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 9, "manualPath": "/manuals/rieju-mrt50-reparation-moteur.pdf", "shortLabel": "Moteur" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-05",
+      "category": "obligatoire",
+      "title": "Vérifier les fuites du carter",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 20, "manualPath": "/manuals/rieju-mrt50-reparation-moteur.pdf", "shortLabel": "Moteur" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-06",
+      "category": "obligatoire",
+      "title": "Culasse, cylindre et piston",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 20, "manualPath": "/manuals/rieju-mrt50-reparation-moteur.pdf", "shortLabel": "Moteur" }
+      ],
+      "requiresSpecialTools": true,
+      "cells": {
+        "km1000": "none",
+        "km4000": "none",
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": "none",
+        "kmPlus3000": "none"
+      }
+    },
+    {
+      "id": "rj-07",
+      "category": "obligatoire",
+      "title": "Vérifier l'usure des segments de piston",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 25, "manualPath": "/manuals/rieju-mrt50-reparation-moteur.pdf", "shortLabel": "Moteur" }
+      ],
+      "requiresSpecialTools": true,
+      "cells": {
+        "km1000": "none",
+        "km4000": "none",
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": "none"
+      }
+    },
+    {
+      "id": "rj-08",
+      "category": "obligatoire",
+      "title": "Embrayage",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 16, "manualPath": "/manuals/rieju-mrt50-reparation-moteur.pdf", "shortLabel": "Moteur" }
+      ],
+      "requiresSpecialTools": true,
+      "cells": {
+        "km1000": "none",
+        "km4000": "none",
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": "none"
+      }
+    },
+    {
+      "id": "rj-09",
+      "category": "obligatoire",
+      "title": "Bougie d'allumage",
+      "page": 69,
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "C" },
+        "kmPlus3000": { "type": "text", "value": "I - C (+10.000 Km)" }
+      }
+    },
+    {
+      "id": "rj-10",
+      "category": "obligatoire",
+      "title": "Tension et usure de la chaîne d'entraînement",
+      "page": null,
+      "manualRefs": [
+        { "page": 75, "shortLabel": "Proprio." },
+        { "page": 26, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I/E" },
+        "km4000": { "type": "text", "value": "I/E" },
+        "km7000": { "type": "text", "value": "I/E" },
+        "km10000": { "type": "text", "value": "C" },
+        "kmPlus3000": { "type": "text", "value": "I/E - C (+10.000 Km)" }
+      }
+    },
+    {
+      "id": "rj-11",
+      "category": "obligatoire",
+      "title": "Système électrique",
+      "page": null,
+      "manualRefs": [
+        { "page": 22, "shortLabel": "Proprio." },
+        { "page": 56, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-12",
+      "category": "obligatoire",
+      "title": "Inspecter et régler le carburateur",
+      "page": null,
+      "manualRefs": [
+        { "page": 11, "shortLabel": "Proprio." },
+        { "page": 16, "manualPath": "/manuals/rieju-mrt50-reparation-moteur.pdf", "shortLabel": "Moteur" }
+      ],
+      "requiresSpecialTools": true,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": "none",
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": "none",
+        "kmPlus3000": { "type": "text", "value": "I (+6.000 Km)" }
+      }
+    },
+    {
+      "id": "rj-13",
+      "category": "obligatoire",
+      "title": "Carburateur (ralenti)",
+      "page": null,
+      "manualRefs": [
+        { "page": 11, "shortLabel": "Proprio." },
+        { "page": 16, "manualPath": "/manuals/rieju-mrt50-reparation-moteur.pdf", "shortLabel": "Moteur" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": "none",
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": "none",
+        "kmPlus3000": { "type": "text", "value": "I (+6.000 Km)" }
+      }
+    },
+    {
+      "id": "rj-14",
+      "category": "obligatoire",
+      "title": "Conduite de carburant",
+      "page": null,
+      "manualRefs": [
+        { "page": 9, "shortLabel": "Proprio." },
+        { "page": 9, "manualPath": "/manuals/rieju-mrt50-reparation-moteur.pdf", "shortLabel": "Moteur" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-15",
+      "category": "obligatoire",
+      "title": "Système d'échappement",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 26, "manualPath": "/manuals/rieju-mrt50-reparation-moteur.pdf", "shortLabel": "Moteur" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-16",
+      "category": "obligatoire",
+      "title": "Foncti. des commandes, de l'accélérateur et des câbles",
+      "page": 75,
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-17",
+      "category": "obligatoire",
+      "title": "Direction et guidon",
+      "page": 74,
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-18",
+      "category": "obligatoire",
+      "title": "Amortisseurs de chocs",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 39, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis" }
+      ],
+      "requiresSpecialTools": true,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": "none",
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": "none",
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-19",
+      "category": "obligatoire",
+      "title": "Suspension avant/arrière",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 16, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": "none",
+        "km7000": "none",
+        "km10000": "none",
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-20",
+      "category": "obligatoire",
+      "title": "Béquille centrale / kickstand",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 37, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": "none",
+        "km7000": { "type": "text", "value": "I/E" },
+        "km10000": "none",
+        "kmPlus3000": { "type": "text", "value": "I/E" }
+      }
+    },
+    {
+      "id": "rj-21",
+      "category": "obligatoire",
+      "title": "Mécanisme de freinage / revêtement",
+      "page": null,
+      "manualRefs": [
+        { "page": 60, "shortLabel": "Proprio." },
+        { "page": 25, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-22",
+      "category": "obligatoire",
+      "title": "Liquide de refroidissement et niveau",
+      "page": 43,
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "C" },
+        "kmPlus3000": { "type": "text", "value": "I - C (+10.000 Km)" }
+      }
+    },
+    {
+      "id": "rj-23",
+      "category": "obligatoire",
+      "title": "Liquide de frein",
+      "page": null,
+      "manualRefs": [
+        { "page": 60, "shortLabel": "Proprio." },
+        { "page": 25, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "C" },
+        "kmPlus3000": { "type": "text", "value": "I - C (+10.000 Km)" }
+      }
+    },
+    {
+      "id": "rj-24",
+      "category": "obligatoire",
+      "title": "Plaquettes de frein",
+      "page": null,
+      "manualRefs": [
+        { "page": 66, "shortLabel": "Proprio." },
+        { "page": 49, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis — pince AV" },
+        { "page": 51, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis — pince AR" }
+      ],
+      "remarks": "Les plaquettes se changent côté pinces (AV / AR) ; le manuel atelier châssis détaille le démontage des deux pinces.",
+      "requiresSpecialTools": true,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "C" },
+        "km7000": { "type": "text", "value": "C" },
+        "km10000": { "type": "text", "value": "C" },
+        "kmPlus3000": { "type": "text", "value": "C" }
+      }
+    },
+    {
+      "id": "rj-25",
+      "category": "obligatoire",
+      "title": "Disques et pinces de frein",
+      "page": null,
+      "manualRefs": [
+        { "page": 60, "shortLabel": "Proprio. (freins)" },
+        { "page": 16, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis — disques (cotes)" },
+        { "page": 49, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis — pince AV" },
+        { "page": 51, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis — pince AR" }
+      ],
+      "remarks": "Contrôle des disques (usure, voilage) et des fixations ; accès / dépose des disques côté atelier passe par les pinces AV et AR (même chapitre que les plaquettes).",
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "C" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I - C (+7.000 Km)" }
+      }
+    },
+    {
+      "id": "rj-26",
+      "category": "obligatoire",
+      "title": "Vérifier la tension et le décalage des rayons de la roue",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 14, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-27",
+      "category": "obligatoire",
+      "title": "Pneus, pression et état",
+      "page": 30,
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "C" },
+        "kmPlus3000": { "type": "text", "value": "I - C (+10.000 Km)" }
+      }
+    },
+    {
+      "id": "rj-28",
+      "category": "obligatoire",
+      "title": "Boulons et écrous du moteur",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 35, "manualPath": "/manuals/rieju-mrt50-reparation-moteur.pdf", "shortLabel": "Moteur" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    },
+    {
+      "id": "rj-29",
+      "category": "obligatoire",
+      "title": "Écrous et boulons pour chaque composant",
+      "page": null,
+      "manualRefs": [
+        { "page": 76, "shortLabel": "Proprio." },
+        { "page": 17, "manualPath": "/manuals/rieju-mrt50-reparation-chassis.pdf", "shortLabel": "Châssis" }
+      ],
+      "requiresSpecialTools": false,
+      "cells": {
+        "km1000": { "type": "text", "value": "I" },
+        "km4000": { "type": "text", "value": "I" },
+        "km7000": { "type": "text", "value": "I" },
+        "km10000": { "type": "text", "value": "I" },
+        "kmPlus3000": { "type": "text", "value": "I" }
+      }
+    }
+  ]
+}
